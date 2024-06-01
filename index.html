@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+    <style>
+    h1{
+       font-family:"Berlin Sans FB";
+       text-align: center;
+
+    }
+    p,label,option,button{
+        font-family: century gothic;
+        text-align: center;
+       
+    }
+    </style>
+<head>
+    <title>JEE Advanced Eligibility Checker</title>
+    <script>
+        function checkEligibility() {
+            // Get the input values
+            const percentile = parseFloat(document.getElementById('percentile').value);
+            const category = document.getElementById('category').value;
+
+            // Define the eligibility criteria
+            const criteria = {
+                general: 93,
+                obc: 79,
+                sc: 60,
+                st: 60
+            };
+
+            // Check eligibility
+            let isEligible = false;
+            if (category in criteria) {
+                if (percentile >= criteria[category]) {
+                    isEligible = true;
+                }
+            }
+
+            // Display the result
+            const result = document.getElementById('result');
+            if (isEligible) {
+                result.textContent = 'Congratulations! You are eligible for JEE Advanced.';
+                result.style.color = 'green';
+            } else {
+                result.textContent = 'Sorry, you are not eligible for JEE Advanced.';
+                result.style.color = 'red';
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>JEE Advanced Eligibility Checker 2024</h1>
+    
+ <center>   <label for="percentile">Enter your JEE Mains Percentile:</label>
+    <input type="number" id="percentile" name="percentile" step="0.01" min="0" max="100" required>
+    <br><br>
+    <label for="category">Select your category:</label>
+    <select id="category" name="category" required>
+        <option value="general">General</option>
+        <option value="obc">OBC</option>
+        <option value="sc">SC</option>
+        <option value="st">ST</option>
+    </select>
+    <br><br>
+    <button onclick="checkEligibility()">Check Eligibility</button>
+    <br><br>
+    <p id="result"></p>
+    <p>&copy; Mudit WEB TOOLS 2024</p>
+</center>
+
+</body>
+</html>
