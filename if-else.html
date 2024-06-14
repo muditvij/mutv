@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vote eligibility checker</title>
+    <body>
+        <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+        <style>
+         body{
+            font-family: 'poppins';
+            background-image: linear-gradient(to right,rgb(255, 212, 212),rgb(255, 255, 188),rgb(207, 207, 255));
+         }
+         button{
+            padding: 10px;
+            font-family: 'poppins';
+            border-radius: 3cm;
+            border: none;
+            transition: 0.2s;
+         }
+         button:hover{
+            color: white;
+            background-color: black;
+         }
+         input{
+            width: 250px;
+            height: 30px;
+            border-radius: 20px;
+            border: none;
+            font-family: 'poppins';
+         }
+        </style>
+        <script>
+         function eligible(){
+            y=document.getElementById("name").value 
+            z=document.getElementById("age").value
+            if(z>18){
+                alert("Hi, "+y+ ". you are eligible to vote")
+                c=confirm("You wanna get redirected to ECI Election Commision india website? for further registrations.")
+                if(c){
+                    document.location = "https://www.eci.gov.in/"
+                }
+                else{
+                    alert("Program Ended.")
+                }
+            }
+            else{
+                alert("Hi, "+y+ ". You are not eligible to cast vote. wait for "+ (18-z) + " years.")
+            }
+         }
+        </script>
+        <div class="header">
+        <h1>Vote Eligibility Check</h1>
+        <p>Using Java script</p>
+        </div>
+        <div>
+        <label for="name">Name: </label>
+        <input type="text" placeholder="  enter your name" id="name"><br>
+        <br>
+        <label for="age">Age: </label>
+        <input type="number" id="age" placeholder="  enter your age"><br>
+        <br>
+        <button onclick="eligible()">Submit</button>
+        <br>
+        </div>
+        <footer>
+            <p>&copy; All rights reserved. Mudit Web tools. 2024</p>
+            <p><u>Attributes used</u><br><ul><li>HTML</li><li>JavaScript(if-else statement, alert)</li><li>CSS (for styling)</li></ul>
+             </p>
+        </footer>
+    </body>
+</html>
