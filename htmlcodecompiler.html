@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML,CSS,JS Complier</title>
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+</head>
+<style>
+    body{
+        background-color: rgb(168, 168, 168);
+    }
+    .head{
+      font-family: 'poppins';
+      background-color: white;
+      padding: 10px;
+      border-radius: 10px;
+    }
+    footer{
+        font-family: 'poppins';
+        background-color: white;
+        border-radius: 10px;
+        padding: 20px;
+        text-align: center;
+    }
+    .codingg{
+        font-family: 'poppins';
+        text-align: center;
+        background-color: white;
+        border-radius: 10px;
+    }
+    ul li{
+        list-style: none;
+    }
+</style>
+<script>
+    function coding(){
+     y=document.getElementById("code").value
+     document.getElementById("replace").innerHTML=y
+    }
+</script>
+<body>
+    <div class="head">
+    <h1><center>Welcome to Code Compiler <br> Live</center></h1>
+    </div>
+    
+    <div class="codingg">
+    <p id="replace">This line will replace your code.</p>
+    <textarea id="code" onkeyup="coding()"></textarea>
+    </div>
+    <br>
+    <footer>
+        <p>&copy; Mudit Web Tools. All rights reserved. 2024</p>
+        <P><b>Terms and Conditions</b></P>
+        <ul>
+            <li>This compiler is not 100% accurate</li>
+            <li>You can use it for day to day task not for regular projects.</li>
+            <li>After refreshing all your data will be vanished. It's just a client side page not containg backend database.</li>
+        </ul>
+    </footer>
+</body>
+</html>
