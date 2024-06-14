@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loops</title>
+</head>
+<link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+        <style>
+         body{
+            font-family: 'poppins';
+            background-image: linear-gradient(to right,rgb(210, 226, 149),rgb(134, 176, 255),rgb(228, 159, 207));
+         }
+         button{
+            padding: 10px;
+            font-family: 'poppins';
+            border-radius: 3cm;
+            border: none;
+            transition: 0.2s;
+         }
+         button:hover{
+            color: white;
+            background-color: black;
+         }
+         input{
+            width: 250px;
+            height: 30px;
+            border-radius: 10px;
+            border: none;
+            font-family: 'poppins';
+         }
+         .head{
+            background-color: white;
+            border-radius: 15px;
+            opacity: 70%;
+         }
+         .head p, h1{
+            margin: 20px;
+         }
+        </style>
+<script>
+    function loopes(){
+    x=document.getElementById("sent").value 
+    y=document.getElementById("times").value
+    for(i=1;i<=y;i++){
+        document.write(i+". "+x); 
+        document.write("<br />")
+    }
+}
+</script>
+<body>
+    <div class="head">
+    <h1>Loops in JS</h1>
+    <p>Sentence repeter using JS</p>
+    </div>
+    <br>
+    <label for="sentence">Enter the sentence:  </label>
+    <input type="text" id="sent"><br><br>
+    <label for="times">How many times you want it to repeat:  </label>
+    <input type="number" id="times"><br><br>
+    <button onclick="loopes()">Execute</button>
+    <br>
+    <br>
+    <footer>&copy; Mudit Web Workers. 2024 all rights reserved.</footer>
+    <p><u>Attributes used</u><br><ul><li>HTML</li><li>JavaScript(loops)</li><li>CSS (for styling)</li></ul>
+        <p><u>Read before use:</u><br><ul><li>Putting large numbers will lead to the crash of your browser.</li><li>Don't put very large numbers.</li><li>Use it just for fun and knowledge.</li></ul>
+</body>
+</html>
