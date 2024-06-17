@@ -1,8 +1,75 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Application Number Generator</title>
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+    <script>
+        function alertbox(){
+         a=document.getElementById("name").value;
+         b=document.getElementById("number").value;
+         c=document.getElementById("e-mail").value;
+        d= Math.floor(Math.random()*10000)+9000;
+         alert("Thank you "+a+", for submitting your data with us. Your Application number is "+ d +". You will recieve your details on your filled contact details "+b+" "+c+" soon.")
+         document.write('<h1 id="helo">Registration Form </h1><br/><h2 id="helo2">Application Number: '+d+'<br/>Name: '+a+'<br />Phone Number: '+b+'<br/>e-mail: '+c+'</h2>')
+         document.write("<p>&copy; Mizoram Institute of Technology<p>")
+         window.print()
+        }
+        function prt(){
+            window.print();
+        }
+    </script>
+    <style>
+        body{
+           font-family: 'poppins';
+            background-image: linear-gradient(to right, rgb(255, 255, 219),rgb(214, 156, 255),rgb(158, 158, 255));
+        }
+         input{
+            width: 250px;
+            height: 30px;
+            margin: 25px;
+            border-radius: 20px;
+            border: none;
+            font-family: 'poppins';
+            padding: 6px;
+         }
+       .submitarea  input[type=submit],input[type=reset]{
+             margin: 10px;
+           width: 100px;
+           transition: 0.4s;
+         }
+         .submitarea  input[type=submit]:hover{
+            background-color: black;
+            color: white;
+         }
+         .submitarea input[type=reset]:hover {
+                background-color: black;
+                color: white;
+         }
+        </style>
+    </style>
 </head>
 <body>
-
+    <h1>MIT (Mizoram Institute of Technology)</h1>
+    <p>Excellence comes from us!</p>
+    <hr>
+    <form action="" onsubmit="alertbox()">
+   <label for="name">Name: </label>
+   <input type="text" name="name" id="name" required><br>
+   <label for="Phone Number">Phone Number: </label>
+   <input type="number" name="number" id="number" required><br>
+   <label for="e-mail">e-mail: </label>
+   <input type="text" name="e-mail" id="e-mail" required><br>
+   <div class="submitarea">
+   <input type="submit" name="submit" id="submit">
+   <input type="reset" name="reset" id="reset">
+   </div>
+    </form>
+    <footer>
+        <p>&copy; MIT Mizoram, MG Road, Agartala, India</p>
+        <p>mitmizoram@mit.com | +91 XXXXXXX90</p>
+        <button onclick="prt()"></button>
+    </footer>
 </body>
 </html>
