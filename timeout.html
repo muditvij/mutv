@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ui</title>
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+    <style>
+        .Ad{
+            display: none;
+            position: absolute;
+            left: 40%;
+            top: 20%;
+            padding: 20px;
+            background-color: aliceblue;
+            border-radius: 20px;
+            font-family: 'poppins';
+        }
+        .Ad input{
+            margin: 20px; padding: 4px; border-radius: 10px;
+        }
+        .overlay{width: 100%; height: 100%; background-color: rgb(99, 99, 99); display: none; position: fixed;}
+        button{padding: 8px; font-family: 'poppins'; border-radius: 10px;}
+    </style>
+    <script>
+        let jaadu;
+function open(){
+    a=document.getElementById("ad")
+    document.getElementById("overlay").style.display='block';
+    a.style.display = 'block'
+}
+jaadu = setTimeout(open,5000)
+function gayab(){
+     a=document.getElementById("ad")
+     document.getElementById("overlay").style.display='none'
+    a.style.display = 'none'
+    clearTimeout(jaadu);
+}
+    </script>
+</head>
+<body>
+    <div class="overlay" id="overlay"></div>
+    <div class="Ad" id="ad">
+        <form action="#">
+            <h4>Welcome Back</h4>
+            <h3>Log-In</h3>
+            <p>&copy; Mudit Web Workers</p>
+            <label for="user">Username: </label>
+            <input type="text" name="name" id="name"><br>
+            <label for="pass">Password: </label>
+            <input type="password" name="pass" id="pass"><br>
+        </form>
+        <button onclick="gayab()">close</button>
+        <button>Sign In</button>
+    </div>
+</body> 
+</html>
