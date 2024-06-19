@@ -6,19 +6,8 @@
     <title>ui</title>
     <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
     <style>
-        .Ad{
-            display: none;
-            position: absolute;
-            left: 40%;
-            top: 20%;
-            padding: 20px;
-            background-color: aliceblue;
-            border-radius: 20px;
-            font-family: 'poppins';
-        }
-        .Ad input{
-            margin: 20px; padding: 4px; border-radius: 10px;
-        }
+        .Ad{ display: none;  position: absolute;  left: 40%;  top: 20%;  padding: 20px;  background-color: aliceblue;  border-radius: 20px;  font-family: 'poppins';}
+        .Ad input{  margin: 20px; padding: 4px; border-radius: 10px; }
         .overlay{width: 100%; height: 100%; background-color: rgb(99, 99, 99); display: none; position: fixed;}
         button{padding: 8px; font-family: 'poppins'; border-radius: 10px;}
     </style>
@@ -36,6 +25,10 @@ function gayab(){
     a.style.display = 'none'
     clearTimeout(jaadu);
 }
+        function thank() {
+            a=document.getElementById("name").value;
+            alert("Succesfully signed in as "+a);
+        }
     </script>
 </head>
 <body>
@@ -51,7 +44,7 @@ function gayab(){
             <input type="password" name="pass" id="pass"><br>
         </form>
         <button onclick="gayab()">close</button>
-        <button>Sign In</button>
+        <button onclick="thank()">Sign In</button>
     </div>
 </body> 
 </html>
