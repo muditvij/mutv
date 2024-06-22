@@ -1,0 +1,63 @@
+<style>
+    #move{width: 200px; height: 200px; background-color: rgb(165, 165, 165); border: 3px solid black; position: absolute; left: 00px; top: 00px;}
+    #move{text-align: center; color:white;}
+    #enform{position: absolute; top: 50%; padding:20px; background-color: antiquewhite; border-radius: 20px; font-family: 'Courier New', Courier, monospace; left: -20%; box-shadow: 5px 5px 5px gray;}
+</style>
+<script>
+i=0
+function hello(){
+a = document.getElementById("move")
+a.style.left = i
+a.style.top = i
+i++
+if(i<500){
+setTimeout(hello,0.1)
+}
+}
+t=0;
+function bulao(){
+s=document.getElementById("enform")
+s.style.left = i
+i++
+if(i<400){
+setTimeout(bulao,0.1)
+}
+}
+</script>
+<body>
+<div id="move">
+    Make me Run
+    <br>
+    <button onclick="hello()">hello</button>
+</div>
+<div id="enform">
+<form action="#">
+    <h4>Enquiry here: </h4>
+    <label for="name">Name: </label>
+    <input type="text" name="name" id="name"><br>
+    <label for="Mobile">Mobile: </label>
+    <input type="number" name="number" id="number"><br>
+    <input type="submit" name="submit" id="submit">
+    <button style="position:absolute;left: 100%;" onclick="bulao()">c<br>l<br>i<br>c<br>k
+    </button>
+</form>
+</div>
+<style>
+ul li{
+    
+    background-color: aliceblue;
+}
+.holl{position: absolute;
+    left: 50%;
+    top: 50%;
+}
+</style>
+<div class="holl">
+    <ul>
+        <li>hello</li>
+        <li>hello</li>
+        <li>hello</li>
+        <li>hello</li>
+    </ul>
+</div>
+</body>
