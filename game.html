@@ -1,30 +1,84 @@
+<title>Catch me if you can</title>
 <script>
-    i=0;
-function huntme() {
-    var height = document.documentElement.clientHeight;
-    var width = document.documentElement.clientWidth;
-    var x = Math.floor(Math.random() * height);
-    var y = Math.floor(Math.random() * width);
-    var a = document.getElementById("smile");
-    a.style.left = (y - 150) + 'px';
-    a.style.top = (x - 150) + 'px';
-    a.style.display = "block";
-    i++;
-    document.getElementById("score").innerHTML = i;
-    
- r = Math.floor(Math.random() * 10) + 5;
-
-}
- 
-// I want to set a schedule to turn of the function 
+    i = 0;
+    function hunt() {
+       function start() {
+        var height = document.documentElement.clientHeight;
+        var width = document.documentElement.clientWidth;
+        var x = Math.floor(Math.random() * height);
+        var y = Math.floor(Math.random() * width);
+        var a = document.getElementById("smile");
+        a.style.left = (y - 150) + 'px';
+        a.style.top = (x - 150) + 'px';
+        a.style.display = "block";
+        i++;
+        document.getElementById("score").innerHTML = i;
+        }
+        rv = setTimeout(start,10)
+        function clt(){
+            clearTimeout(rv)
+            r=Math.floor(Math.random()*10000)+5000
+            alert(r)
+        }
+        setTimeout(clt,r)
+    }
+    h = 0;
+    function darkmode() {
+        if (h == 0) {
+            document.body.style.backgroundColor = "black"
+            document.body.style.color = "white";
+            document.getElementById("mode").innerHTML = "Switch to Bright mode"
+            h++
+        }
+        else {
+            document.body.style.backgroundColor = "white"
+            document.body.style.color = "black";
+            document.getElementById("mode").innerHTML = "Switch to dark mode"
+            h = 0;
+        }
+    }
+    function weclome() {
+        nam = document.getElementById("na").value
+        document.getElementById("name").innerHTML = nam
+    }
+    // I want to set a schedule to turn of the function 
 </script>
 <style>
-#smile{position: absolute; left: 00px; top: 00px; display: none;}
+    body {
+        padding: 25px;
+        background-color: white;
+        color: black;
+        font-size: 25px;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    div {
+        display: inline;
+    }
+
+    #smile {
+        position: absolute;
+        left: 00px;
+        top: 00px;
+        display: none;
+    }
+    button{padding: 15px; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; border-radius: 20px;
+     background-color: rgb(0, 0, 59); color: white; font-weight: 500;}
+     button:hover{ background-color: white; color: rgb(0, 0, 59) ;}
 </style>
+
 <body>
-    <button onclick="huntme()">START</button>
-    <div id="smile">
-        <img src="pngtree-smile-face-emoji-png-image_10203761.png" alt="huntme" height="30%" onmouseover="huntme()">
-    </div>
-    <div id="your">score :<div id="score"></div></div>
+    <center>
+        <H1>Catch me if you can</H1>
+        <button onclick="huntme()">START</button>
+        <br><br>
+        <div id="smile">
+            <img src="pngtree-smile-face-emoji-png-image_10203761.png" alt="huntme" height="30%" onmouseover="huntme()">
+        </div>
+        <div id="your">score : <div id="score"></div>
+        </div>
+        <br><br>
+        <button onclick="darkmode()" id="mode">Switch to darkMode</button>
+        <p><center>&copy; Mudit Game Development</center></p>
+    </center>
 </body>
