@@ -1,0 +1,30 @@
+<script>
+    i=0;
+function huntme() {
+    var height = document.documentElement.clientHeight;
+    var width = document.documentElement.clientWidth;
+    var x = Math.floor(Math.random() * height);
+    var y = Math.floor(Math.random() * width);
+    var a = document.getElementById("smile");
+    a.style.left = (y - 150) + 'px';
+    a.style.top = (x - 150) + 'px';
+    a.style.display = "block";
+    i++;
+    document.getElementById("score").innerHTML = i;
+    
+ r = Math.floor(Math.random() * 10) + 5;
+
+}
+ 
+// I want to set a schedule to turn of the function 
+</script>
+<style>
+#smile{position: absolute; left: 00px; top: 00px; display: none;}
+</style>
+<body>
+    <button onclick="huntme()">START</button>
+    <div id="smile">
+        <img src="pngtree-smile-face-emoji-png-image_10203761.png" alt="huntme" height="30%" onmouseover="huntme()">
+    </div>
+    <div id="your">score :<div id="score"></div></div>
+</body>
